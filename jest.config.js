@@ -31,7 +31,7 @@ module.exports = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: 'v8'
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -188,8 +188,9 @@ module.exports = {
   // verbose: undefined,
 
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
-  // watchPathIgnorePatterns: [],
+  watchPathIgnorePatterns: ['globalConfig'],
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  preset: '@shelf/jest-mongodb'
 }
