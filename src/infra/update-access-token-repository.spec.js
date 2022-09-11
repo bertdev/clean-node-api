@@ -7,8 +7,8 @@ const makeSut = () => {
 }
 
 let userModel
+let fakeUserId
 describe('UpdateAccessToken Repository', () => {
-  let fakeUserId
   beforeAll(async () => {
     await MongoHelper.connect(global.__MONGO_URI__)
     userModel = await MongoHelper.getCollection('users')
