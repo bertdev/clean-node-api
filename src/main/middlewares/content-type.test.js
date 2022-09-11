@@ -10,4 +10,14 @@ describe('Content-type Middleware', () => {
       .get('/test_content_type')
     expect(response.headers['content-type']).toMatch(/json/)
   })
+
+  test('Should return xml content-type if is forced', async () => {
+    app.get('/test_content_type_xml', (req, res) => {
+      res.type('xml')
+      res.send('')
+    })
+    const response = await request(app)
+      .get('/test_content_type_xml')
+    expect(response.headers['content-type']).toMatch(/xml/)
+  })
 })
