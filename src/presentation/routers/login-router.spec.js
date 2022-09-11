@@ -206,7 +206,7 @@ describe('Login Router', () => {
     const suts = [].concat(
       new LoginRouter({
         authUseCase: makeAuthUseCaseWithError(),
-        emailValidatorSpy
+        emailValidator: emailValidatorSpy
       }),
       new LoginRouter({
         authUseCase: authUseCaseSpy,

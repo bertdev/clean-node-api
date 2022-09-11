@@ -14,7 +14,7 @@ describe('Mongo Helper', () => {
     expect(collection).toBeTruthy()
   })
 
-  test('Should return a reconnect when getCllection() is invoked and client is disconnected', async () => {
+  test('Should return a reconnect when getCollection() is invoked and client is disconnected', async () => {
     await MongoHelper.disconnect()
     expect(MongoHelper.client).toBeFalsy()
     await MongoHelper.getCollection('users')
